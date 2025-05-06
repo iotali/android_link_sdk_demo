@@ -11,7 +11,7 @@
 | | deviceSecret | uwMTmVAMnGGHaAkqmeDY6cHxxB****** | |
 | | mqttHost | 实例地址:8883 | |
 
-2. 下载解压 [ca.crt.zip](https://www.yuque.com/attachments/yuque/0/2025/zip/152427/1745920452446-1276d5e1-8bfd-4e14-b18a-8ca2ff1fc6e8.zip) 证书到 `app/src/main/res/raw/ca.crt`
+2. 下载解压 [ca.crt.zip](Docs/ca.crt.zip) 证书到 `app/src/main/res/raw/ca.crt`
 
 并修改以下两处代码：
 
@@ -33,7 +33,7 @@ clientConfig.channelHost = mqttHost;
 clientConfig.channelRootCrtFile = context.getResources().openRawResource(R.raw.ca);
 ```
 
-3. 下载 [network_security_config.xml](https://www.yuque.com/attachments/yuque/0/2025/xml/152427/1745978758359-20d21041-37ed-44ee-9a5c-632cb2d1affa.xml) 到 `app/src/main/res/xml/network_security_config.xml`
+3. 下载 [network_security_config.xml](Docs/network_security_config.xml) 到 `app/src/main/res/xml/network_security_config.xml`
 
 并修改你的 AndroidManifest.xml
 
@@ -46,14 +46,14 @@ clientConfig.channelRootCrtFile = context.getResources().openRawResource(R.raw.c
 </application>
 ```
 
-4. 单击 ![编译按钮](https://cdn.nlark.com/yuque/0/2025/gif/152427/1745917320950-90bfa269-f1a0-4303-a992-9f6b1e291cd1.gif) 按钮，完成项目的编译。
+4. 单击 ![编译按钮](Docs/img/compile_button.gif) 按钮，完成项目的编译。
 
 # 运行结果
 
-+ 项目编译完成后，您可单击 ![运行按钮](https://cdn.nlark.com/yuque/0/2025/gif/152427/1745917320962-62af7b44-60f6-495a-95d9-1f6b8b67bd78.gif) 按钮，运行项目。
++ 项目编译完成后，您可单击 ![运行按钮](Docs/img/run_button.gif) 按钮，运行项目。
 
 如下图所示，Demo 程序在虚拟设备中成功运行，设备成功接入物联网平台。
-![运行结果](https://cdn.nlark.com/yuque/0/2025/gif/152427/1745917321103-5ab43085-0788-44ad-b6f0-66b617e1c622.gif)
+![运行结果](Docs/img/run_result.gif)
 
 单击 **Mqtt示例**。
 
@@ -61,7 +61,7 @@ clientConfig.channelRootCrtFile = context.getResources().openRawResource(R.raw.c
 
 例如拷贝的内容为：`/a18wP******/${deviceName}/user/get`，您需要将产品名称和设备名称修改为您自己的。
 
-![订阅示例](https://cdn.nlark.com/yuque/0/2025/png/152427/1745917321269-c933d5d9-2c7f-495a-9ae0-a9c0bd655023.png)
+![订阅示例](Docs/img/subscribe_example.png)
 
 Topic 订阅成功后，设备将接收到物联网平台发送的消息。在收到平台发送的消息之前，您可以自行给设备发送消息进行测试。
 
@@ -70,5 +70,5 @@ Topic 订阅成功后，设备将接收到物联网平台发送的消息。在�
 2. 在 **Mqtt示例** 页面，将 **发布消息topic** 修改为前面步骤中拷贝的发布Topic内容，并填入消息内容，单击 **发布**。
 
 消息内容自定义，可以是中文等，下图仅为示例。
-![发布示例](https://cdn.nlark.com/yuque/0/2025/png/152427/1745920625973-09fcf65a-b4fe-4f71-a248-4f8a1efdb212.png)
+![发布示例](Docs/img/publish_example.png)
 
