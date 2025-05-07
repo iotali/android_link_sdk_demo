@@ -1,1 +1,8 @@
-Redirecting to /login?goto=https%3A%2F%2Fwww.yuque.com%2Fattachments%2Fyuque%2F0%2F2025%2Fxml%2F152427%2F1745978758359-20d21041-37ed-44ee-9a5c-632cb2d1affa.xml.
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="@raw/ca"/>
+        </trust-anchors>
+    </base-config>
+</network-security-config>
